@@ -1,0 +1,13 @@
+Protoplaster tests report
+==================
+|device name|test name|module|duration|message|status|
+|---|---|---|---|---|---|
+|/dev/i2c-0|addresses|test.py::TestI2C::test_addresses|8ms 383us||<span style='color:green'>passed|
+|/dev/i2c-0|addresses|test.py::TestI2C::test_addresses|7ms 604us||<span style='color:green'>passed|
+|/dev/video0|frame|test.py::TestCamera::test_frame|256ms 241us||<span style='color:green'>passed|
+|/dev/video0|device_name|test.py::TestCamera::test_device_name|220ms 367us||<span style='color:green'>passed|
+|/dev/video0|driver_name|test.py::TestCamera::test_driver_name|221ms 848us||<span style='color:green'>passed|
+|/dev/video2|frame|test.py::TestCamera::test_frame|241ms 463us||<span style='color:green'>passed|
+|/dev/video2|device_name|test.py::TestCamera::test_device_name|205ms 827us||<span style='color:green'>passed|
+|/dev/video2|driver_name|test.py::TestCamera::test_driver_name|204ms 421us||<span style='color:green'>passed|
+|/sys/class/gpio/20|read_write|test.py::TestGPIO::test_read_write|12ms 357us||<span style='color:green'>passed|

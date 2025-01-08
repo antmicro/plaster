@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css"/>
+        <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        data-tag="font"
+        />
+    </head>
+    <body>
+        <div>
+            <div class="top_bar">
+                <div class="top_bar_items_container">
+                    <div class="top_bar_left">
+                        <img src="static/logo.svg" class="top_bar_logo">
+                    </div>
+                    <div class="top_bar_protoplaster">Protoplaster</div>
+                    <div class="top_bar_right">System report summary</div>
+                </div>
+            </div>
+            <link href="./index.css" rel="stylesheet" />
+            <div class="item_list">
+                <div class="item">
+                    <div class="item_header">
+                        <div class="item_header_left">
+                            <div>
+                                <h2 class="item_header_text">uname</h2>
+                            </div>
+                            
+                                <button 
+                                    class="summary_button"
+                                    id="uname_os info_button" 
+                                    onclick="
+                                        document.getElementById('uname_os info').classList.toggle('hidden');
+                                        document.getElementById('uname_os info_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                <div class="summary_button_container">
+                                    os info
+                                    <img id="uname_os info_button_triangle" class="summary_button_triangle" src="static/summary_downtriangle.svg">
+                                </div>
+                            </button>
+                            
+                        </div>
+                        
+                        <div class="item_header_right">
+                            <p class="item_file_text">Full output available in <a href="uname.out" class="item_file_link">uname.out</a></p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="item_header_separator"></div>
+
+                    
+                    <div id="uname_os info" class="hidden summary_container">
+                        <div class="summary">
+                            <div class="summary_left">
+                                <button 
+                                    class="summary_close_button" 
+                                    onclick="
+                                        document.getElementById('uname_os info').classList.toggle('hidden');
+                                        document.getElementById('uname_os info_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                    <img src="static/summary_x_slash.svg" class="summary_x">
+                                    <img src="static/summary_x_backslash.svg" class="summary_x">
+                                </button>
+                            </div>
+                            <div class="summary_right">
+                                <h3 class="summary_title">os info</h3>
+                                <pre><code class="summary_code">Linux fv-az1208-533 6.5.0-1025-azure #26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item_header">
+                        <div class="item_header_left">
+                            <div>
+                                <h2 class="item_header_text">dmesg</h2>
+                            </div>
+                            
+                                <button 
+                                    class="summary_button"
+                                    id="dmesg_usb_button" 
+                                    onclick="
+                                        document.getElementById('dmesg_usb').classList.toggle('hidden');
+                                        document.getElementById('dmesg_usb_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                <div class="summary_button_container">
+                                    usb
+                                    <img id="dmesg_usb_button_triangle" class="summary_button_triangle" src="static/summary_downtriangle.svg">
+                                </div>
+                            </button>
+                            
+                                <button 
+                                    class="summary_button"
+                                    id="dmesg_v4l_button" 
+                                    onclick="
+                                        document.getElementById('dmesg_v4l').classList.toggle('hidden');
+                                        document.getElementById('dmesg_v4l_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                <div class="summary_button_container">
+                                    v4l
+                                    <img id="dmesg_v4l_button_triangle" class="summary_button_triangle" src="static/summary_downtriangle.svg">
+                                </div>
+                            </button>
+                            
+                        </div>
+                        
+                        <div class="item_header_right">
+                            <p class="item_file_text">Full output available in <a href="dmesg.out" class="item_file_link">dmesg.out</a></p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="item_header_separator"></div>
+
+                    
+                    <div id="dmesg_usb" class="hidden summary_container">
+                        <div class="summary">
+                            <div class="summary_left">
+                                <button 
+                                    class="summary_close_button" 
+                                    onclick="
+                                        document.getElementById('dmesg_usb').classList.toggle('hidden');
+                                        document.getElementById('dmesg_usb_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                    <img src="static/summary_x_slash.svg" class="summary_x">
+                                    <img src="static/summary_x_backslash.svg" class="summary_x">
+                                </button>
+                            </div>
+                            <div class="summary_right">
+                                <h3 class="summary_title">usb</h3>
+                                <pre><code class="summary_code">[    0.904749] usbcore: registered new interface driver usbfs
+[    0.906916] usbcore: registered new interface driver hub
+[    0.909662] usbcore: registered new device driver usb
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="dmesg_v4l" class="hidden summary_container">
+                        <div class="summary">
+                            <div class="summary_left">
+                                <button 
+                                    class="summary_close_button" 
+                                    onclick="
+                                        document.getElementById('dmesg_v4l').classList.toggle('hidden');
+                                        document.getElementById('dmesg_v4l_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                    <img src="static/summary_x_slash.svg" class="summary_x">
+                                    <img src="static/summary_x_backslash.svg" class="summary_x">
+                                </button>
+                            </div>
+                            <div class="summary_right">
+                                <h3 class="summary_title">v4l</h3>
+                                <pre><code class="summary_code">this summary is empty</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item_header">
+                        <div class="item_header_left">
+                            <div>
+                                <h2 class="item_header_text">ip</h2>
+                            </div>
+                            
+                                <button 
+                                    class="summary_button"
+                                    id="ip_Network interfaces state_button" 
+                                    onclick="
+                                        document.getElementById('ip_Network interfaces state').classList.toggle('hidden');
+                                        document.getElementById('ip_Network interfaces state_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                <div class="summary_button_container">
+                                    Network interfaces state
+                                    <img id="ip_Network interfaces state_button_triangle" class="summary_button_triangle" src="static/summary_downtriangle.svg">
+                                </div>
+                            </button>
+                            
+                        </div>
+                        
+                        <div class="item_header_right">
+                            <p class="item_file_text">Full output available in <a href="ip.out" class="item_file_link">ip.out</a></p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="item_header_separator"></div>
+
+                    
+                    <div id="ip_Network interfaces state" class="hidden summary_container">
+                        <div class="summary">
+                            <div class="summary_left">
+                                <button 
+                                    class="summary_close_button" 
+                                    onclick="
+                                        document.getElementById('ip_Network interfaces state').classList.toggle('hidden');
+                                        document.getElementById('ip_Network interfaces state_button_triangle').classList.toggle('summary_button_triangle_open');
+                                    "
+                                >
+                                    <img src="static/summary_x_slash.svg" class="summary_x">
+                                    <img src="static/summary_x_backslash.svg" class="summary_x">
+                                </button>
+                            </div>
+                            <div class="summary_right">
+                                <h3 class="summary_title">Network interfaces state</h3>
+                                <pre><code class="summary_code"><table>
+    <tr>
+        <th>interface</th>
+        <th>state</th>
+        <th>ipv4</th>
+        <th>ipv6</th>
+    </tr>
+    <tr>
+        <td>lo</td>
+        <td>UNKNOWN</td>
+        <td>127.0.0.1/8</td>
+        <td>::1/128</td>
+    </tr>
+    <tr>
+        <td>eth0</td>
+        <td>UP</td>
+        <td>10.1.0.102/16</td>
+        <td>fe80::6245:bdff:febc:b4a8/64</td>
+    </tr>
+    <tr>
+        <td>docker0</td>
+        <td>DOWN</td>
+        <td>172.17.0.1/16</td>
+        <td>cker0:</td>
+    </tr>
+    <tr>
+        <td>tap0</td>
+        <td>UNKNOWN</td>
+        <td>172.16.0.1/16</td>
+        <td>fe80::54f5:3fff:fe35:d9c8/64</td>
+    </tr>
+</table>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
